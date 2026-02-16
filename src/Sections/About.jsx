@@ -1,10 +1,10 @@
 import React from 'react'
-import profile from '../assets/profilephoto.png'
+import profile from '../assets/profilephoto2.png'
 
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/cv.pdf'; // Place your CV file in the public folder as cv.pdf
+    link.href = `${import.meta.env.BASE_URL}/cv.pdf`;
     link.download = 'Gowtham_CV.pdf';
     document.body.appendChild(link);
     link.click();

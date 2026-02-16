@@ -3,7 +3,7 @@ import ProjectCard from '../Components/ProjectCard'
 import FoodDel from '../assets/teamwork.jpg'
 import ECommerce from '../assets/teamwork.jpg'
 import Notes from '../assets/teamwork.jpg'
-import Job from '../assets/teamwork.jpg'
+import Job from '../assets/HireUpPreview.png'
 
 const Projects = () => {
   return (
