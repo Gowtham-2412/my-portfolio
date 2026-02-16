@@ -23,15 +23,15 @@ I designed it to be **clean, responsive, and professional**, making it easy for 
 ---
 
 ## 🌍 Live Demo
-🔗 [View Portfolio](https://your-username.github.io/portfolio)
+🔗 [View Portfolio](https://my-portfolio-opal-eta-54.vercel.app/)
 
 ---
 
 ## 📬 Contact Me
 Interested in working together or hiring me for a project?  
-📧 **Email:** your-email@example.com  
-💼 **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/your-linkedin)  
-🐙 **GitHub:** [Your GitHub](https://github.com/your-username)
+📧 **Email:** sgowtham.konijeti@gmail.com  
+💼 **LinkedIn:** [Your LinkedIn](https://linkedin.com/in/sai-gowtham-konijeti)  
+🐙 **GitHub:** [Your GitHub](https://github.com/Gowtham-2412)
 
 ---
 
