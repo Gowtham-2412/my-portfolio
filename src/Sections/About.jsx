@@ -4,8 +4,8 @@ import profile from '../assets/profilephoto2.png'
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = `${import.meta.env.BASE_URL}/cv.pdf`;
-    link.download = 'Gowtham_CV.pdf';
+    link.href = `${import.meta.env.BASE_URL}/Intern_Resume.pdf`;
+    link.download = 'Gowtham_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -34,7 +34,7 @@ const About = () => {
               className='font-medium py-3 border-[3px] rounded-3xl w-40 border-blue-400 hover:bg-blue-300 hover:border-blue-200 active:bg-blue-500 hover:-translate-y-1 scale-105 transition-all duration-300 ease-linear'
               onClick={handleDownload}
             >
-              Download CV
+              Download Resume
             </button>
             <button className='font-medium w-32 text-white bg-[#444747] border-2 border-gray-500 rounded-3xl hover:bg-transparent hover:text-gray-700 transition-colors duration-300 active:bg-gray-300'>Know More</button>
           </div>
