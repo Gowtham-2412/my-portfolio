@@ -41,7 +41,7 @@ const Hero = () => {
                     </div>
                     <div className='mt-4 flex gap-5 items-center'>
                         <div className='w-12 h-12 border border-black p-2 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:scale-105'>
-                            <a href="https://github.com/" target='blank'>
+                            <a href="https://github.com/Gowtham-2412" target='blank'>
                                 <img src={github} className='w-6' />
                             </a>
                         </div>
