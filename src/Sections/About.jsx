@@ -4,7 +4,7 @@ import profile from '../assets/profilephoto2.png'
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = `${import.meta.env.BASE_URL}/Intern_Resume.pdf`;
+    link.href = `${import.meta.env.BASE_URL}Intern_Resume.pdf`;
     link.download = 'Gowtham_Resume.pdf';
     document.body.appendChild(link);
     link.click();
