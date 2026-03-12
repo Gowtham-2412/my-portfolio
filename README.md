@@ -17,7 +17,7 @@ I designed it to be **clean, responsive, and professional**, making it easy for 
 
 ## 🛠️ Tech Stack
 - **Frontend:** React, Tailwind CSS, JavaScript  
-- **Hosting:** GitHub Pages  
+- **Hosting:** Vercel  
 - **Version Control:** Git & GitHub  
 
 ---
@@ -36,3 +36,4 @@ Interested in working together or hiring me for a project?
 ---
 
 💡 This portfolio was built to highlight my **web development expertise** and create a strong first impression for **freelancing opportunities**.
+
