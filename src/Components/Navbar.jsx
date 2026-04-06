@@ -10,17 +10,16 @@ const Navbar = () => {
   return (
     <>
         <div className='sm:w-4/5 mx-auto flex justify-between max-sm:px-3 py-1.5 relative items-center'>
-            {/* Title */}
             <h1 className='text-[var(--headingprimary)] font-bold text-2xl'>
                 Sai
                 <span className='text-[var(--headingsecondary)]'> Gowtham</span>
             </h1>
             <div className='flex gap-1 items-center font-medium max-md:hidden'>
-                <a className='p-2 hover:bg-gray-200 rounded-md' href="">Home</a>
-                <a className='p-2 hover:bg-gray-200 rounded-md' href="#about">About</a>
-                <a className='p-2 hover:bg-gray-200 rounded-md' href="#skills">Skills</a>
-                <a className='p-2 hover:bg-gray-200 rounded-md' href="#projects">Projects</a>
-                <a className='p-2 hover:bg-gray-200 rounded-md' href="#contact">Contact</a>
+                <a className='p-2 hover:bg-gray-200 rounded-md cursor-pointer' onClick={()=>scrollTo(top)} >Home</a>
+                <a className='p-2 hover:bg-gray-200 rounded-md cursor-pointer' onClick={()=>document.getElementById('about').scrollIntoView()}>About</a>
+                <a className='p-2 hover:bg-gray-200 rounded-md cursor-pointer' href="#skills">Skills</a>
+                <a className='p-2 hover:bg-gray-200 rounded-md cursor-pointer' href="#projects">Projects</a>
+                <a className='p-2 hover:bg-gray-200 rounded-md cursor-pointer' href="#contact">Contact</a>
             </div>
             <img onClick={() => setMenu(!menu)} src={menu?cross:menuicon} className='w-5 md:hidden' alt="" />
             {

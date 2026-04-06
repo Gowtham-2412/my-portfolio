@@ -1,9 +1,10 @@
 import React from 'react'
 import ProjectCard from '../Components/ProjectCard'
-import FoodDel from '../assets/teamwork.jpg'
-import ECommerce from '../assets/teamwork.jpg'
-import Notes from '../assets/teamwork.jpg'
+// import FoodDel from '../assets/teamwork.jpg'
+// import ECommerce from '../assets/teamwork.jpg'
+import Notes from '../assets/collabnotes.png'
 import Job from '../assets/HireUpPreview.png'
+import printhub from '../assets/image.png'
 
 const Projects = () => {
   return (
@@ -13,20 +14,17 @@ const Projects = () => {
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-3/4 mx-auto my-5'>
         <ProjectCard
-         preview={FoodDel}
-          title="Food Delivery App"
-         description="A simple food delivery app with react and MongoDB"
-         tech={[ "React", "Node.js", "MongoDb"]}/>
-        <ProjectCard
-         preview={ECommerce}
-          title="E-Commerce Store"
-         description="Simple beginner friendly Electronics store"
-         tech={[ "React", "Node.js", "MongoDb"]}/>
-        <ProjectCard
          preview={Notes}
           title="Real Time Notes"
          description="A Real Time Notes app with socket integration"
-         tech={[ "React", "Node.js", "MongoDb", "Socket IO"]}/>
+         tech={[ "React", "JWT", "MongoDb", "Socket IO", "Node.js"]}
+         githublink={'https://github.com/Gowtham-2412/Collab-Notes'}/>
+        <ProjectCard
+         preview={printhub}
+          title="Business system"
+         description="Admin controlled smart printing service system designed for small printing shops"
+         tech={[ "React", "Node.js", "MongoDb", "Express", "Cloudinary", "JWT"]}
+         githublink={'https://github.com/Gowtham-2412/PrintHub'}/>
         <ProjectCard
          preview={Job}
           title="Job Board App"

@@ -67,11 +67,11 @@ const Hero = () => {
                    <img src={responsive} className='w-[280px] max-sm:w-[240px]' />
                    <div className='flex justify-around items-center w-full'>
                         <div className='flex flex-col justify-center items-center text-[var(--info)]'>
-                            <p className='font-bold text-3xl'>4+</p>
+                            <p className='font-bold text-3xl'>10+</p>
                             <p className='font-medium text-sm'>Months</p>
                         </div>
                         <div className='flex flex-col justify-center items-center text-[var(--info)]'>
-                            <p className='font-bold text-3xl'>10+</p>
+                            <p className='font-bold text-3xl'>5+</p>
                             <p className='font-medium text-sm'>Projects</p>
                         </div>
                         <div className='flex flex-col justify-center items-center text-[var(--info)]'>

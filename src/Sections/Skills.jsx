@@ -7,10 +7,15 @@ import js from '../assets/javascriptlogo.svg'
 import react from '../assets/reactlogo.svg'
 import node from '../assets/nodejslogo.svg'
 import mongodb from '../assets/mongodblogo.svg'
-import database from '../assets/databaselogo.svg'
 import ps from '../assets/photoshoplogo.svg'
 import tailwind from '../assets/tailwindlogo.svg'
 import git from '../assets/gitlogo.svg'
+import figma from '../assets/figma.svg'
+import postgres from '../assets/postgresql.svg'
+import postman from '../assets/postman.svg'
+import openai from '../assets/openai.svg'
+import gemini from '../assets/gemini.svg'
+import perplexity from '../assets/perplexity.svg'
 
 const Skills = () => {
   return (
@@ -24,6 +29,7 @@ const Skills = () => {
                     <SkillCard skill="CSS" image={css} experience="80"/>
                     <SkillCard skill="JS" image={js} experience="70"/>
                     <SkillCard skill="React" image={react} experience="80"/>
+                    <SkillCard skill="Figma" image={figma} experience="40"/>
                 </div>
             </div>
             <div className=' w-4/5 mx-auto'>
@@ -31,7 +37,7 @@ const Skills = () => {
               <div className='mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>
                 <SkillCard skill="Node.js" image={node} experience="75"/>
                 <SkillCard skill="Mongo DB" image={mongodb} experience="70"/>
-                <SkillCard skill="Databases" image={database} experience="60"/>
+                <SkillCard skill="PostgreSQL" image={postgres} experience="40"/>
               </div>
             </div>
             <h1 className='text-3xl font-bold text-center text-gray-200 mt-20'>Tools→</h1>
@@ -39,6 +45,10 @@ const Skills = () => {
               <ToolCard tool="Tailwind" logo={tailwind}/>
               <ToolCard tool="Git" logo={git}/>
               <ToolCard tool="Photoshop" logo={ps}/>
+              <ToolCard tool='Postman' logo={postman}/>
+              <ToolCard tool='ChatGPT' logo={openai}/>
+              <ToolCard tool='Gemini' logo={gemini}/>
+              <ToolCard tool='Perplexity' logo={perplexity}/>
             </div>
         </section>
     </>

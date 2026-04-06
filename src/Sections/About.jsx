@@ -12,7 +12,7 @@ const About = () => {
   };
 
   return (
-    <section id='about' className="w-full overflow-hidden min-h-screen py-6">
+    <section id='about' className="w-full overflow-hidden min-h-screen py-6 scroll-m-6">
       <h1 className='font-extrabold text-4xl text-[--headingsecondary] text-center mb-5'>About Me</h1>
       <p className='text-center text-[--textsecondary] font-medium text-lg mb-5'>Know the person behind the code</p>
       <div className='mx-auto w-[90%] flex flex-col md:flex-row items-center justify-between gap-8'>
