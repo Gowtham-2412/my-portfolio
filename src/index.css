@@ -87,9 +87,6 @@ img {
     margin: 0 auto;
 }
 
-.section-spacing {
-    padding: 6.5rem 0;
-}
 
 .section-kicker {
     display: inline-flex;
@@ -99,8 +96,9 @@ img {
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.03);
     padding: 0.55rem 1rem;
+    margin: 1.5rem 0;
     color: var(--headingsecondary);
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
@@ -262,6 +260,6 @@ img {
 
 @media (max-width: 768px) {
     .section-spacing {
-        padding: 5rem 0;
+        padding: 3.75rem 0;
     }
 }

@@ -23,7 +23,7 @@ const Hero = () => {
   ]
 
   return (
-    <section id='hero' className='section-shell section-spacing scroll-mt-24'>
+    <section id='hero' className='section-shell'>
       <div className='grid min-h-[calc(100vh-5rem)] items-center gap-16 lg:grid-cols-[1.15fr_0.85fr]'>
         <motion.div
           initial={{ opacity: 0, y: 28 }}

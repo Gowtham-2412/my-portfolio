@@ -43,7 +43,7 @@ const Skills = () => {
   ]
 
   return (
-    <section id='skills' className='section-shell section-spacing scroll-mt-24'>
+    <section id='skills' className='section-shell section-spacing'>
       <div className='text-center'>
         <span className='section-kicker'>Skills</span>
         <h1 className='section-title mt-6'>Focused on modern web delivery.</h1>

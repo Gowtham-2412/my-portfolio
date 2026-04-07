@@ -6,7 +6,7 @@ import printhub from '../assets/image.png'
 
 const Projects = () => {
   return (
-    <section id='projects' className='section-shell section-spacing scroll-mt-24'>
+    <section id='projects' className='section-shell section-spacing'>
       <div className='text-center'>
         <span className='section-kicker'>Projects</span>
         <h1 className='section-title mt-6'>Selected work with a practical edge.</h1>

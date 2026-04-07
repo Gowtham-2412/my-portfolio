@@ -17,7 +17,7 @@ const About = () => {
   }
 
   return (
-    <section id='about' className='section-shell section-spacing scroll-mt-24 overflow-hidden'>
+    <section id='about' className='section-shell section-spacing overflow-hidden py-20'>
       <div className='text-center'>
         <span className='section-kicker'>About</span>
         <h1 className='section-title mt-6'>A calm, product-minded builder.</h1>
