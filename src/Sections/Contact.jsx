@@ -23,7 +23,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id='contact' className='section-shell section-spacing pt-20'>
+    <section id='contact' className='section-shell section-spacing py-20'>
       <div className='text-center'>
         <span className='section-kicker'>Contact</span>
         <h1 className='section-title mt-6'>Open to thoughtful opportunities.</h1>

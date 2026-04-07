@@ -25,7 +25,7 @@ const Navbar = () => {
     }
 
   return (
-        <nav className='section-shell relative flex h-20 items-center justify-between'>
+        <nav className='mx-auto w-[90%] max-w-7xl relative flex h-20 items-center justify-between'>
             <button type='button' className='font-display text-2xl font-extrabold tracking-[-0.04em] text-[var(--headingprimary)]' onClick={() => handleNavigate('#hero')}>
                 Sai
                 <span className='text-[var(--accent)]'> Gowtham</span>
