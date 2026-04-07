@@ -3,16 +3,16 @@ import ContactForm from '../Components/ContactForm'
 import mail from '../assets/mailwhite.svg'
 import phone from '../assets/phonewhite.svg'
 import place from '../assets/locationwhite.svg'
-import linkedin from '../assets/linkedin.svg'
-import twitter from '../assets/twitter.svg'
-import github from '../assets/github.svg'
-import facebook from '../assets/facebook.svg'
+import linkedin from '../assets/linkedinwhite.svg'
+import twitter from '../assets/twitterwhite.svg'
+import github from '../assets/githubwhite.svg'
+import facebook from '../assets/facebookwhite.svg'
 
 const Contact = () => {
   const contacts = [
     { icon: mail, label: 'Email', value: 'sgowtham.konijeti@gmail.com' },
     { icon: phone, label: 'Phone', value: '+91 9502323161' },
-    { icon: place, label: 'Location', value: 'Durgapur, West Bengal' },
+    { icon: place, label: 'Location', value: 'Nellore, Andhra Pradesh' },
   ]
 
   const socialLinks = [
