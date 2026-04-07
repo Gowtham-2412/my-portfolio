@@ -3,38 +3,66 @@ import menuicon from '../assets/menuicon.svg'
 import cross from '../assets/crossicon.svg'
 
 const Navbar = () => {
+    const [menu, setMenu] = useState(false)
 
-    const [menu, setMenu] = useState(false);
+    const navLinks = [
+        { label: 'Home', href: '#hero' },
+        { label: 'About', href: '#about' },
+        { label: 'Skills', href: '#skills' },
+        { label: 'Projects', href: '#projects' },
+        { label: 'Contact', href: '#contact' },
+    ]
 
+    const handleNavigate = (href) => {
+        setMenu(false)
+
+        if (href === '#hero') {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            return
+        }
+
+        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
 
   return (
-    <>
-        <div className='sm:w-4/5 mx-auto flex justify-between max-sm:px-3 py-1.5 relative items-center'>
-            <h1 className='text-[var(--headingprimary)] font-bold text-2xl'>
+        <nav className='section-shell relative flex h-20 items-center justify-between'>
+            <button type='button' className='font-display text-2xl font-extrabold tracking-[-0.04em] text-[var(--headingprimary)]' onClick={() => handleNavigate('#hero')}>
                 Sai
-                <span className='text-[var(--headingsecondary)]'> Gowtham</span>
-            </h1>
-            <div className='flex gap-1 items-center font-medium max-md:hidden'>
-                <a className='p-2 hover:bg-gray-200 rounded-md cursor-pointer' onClick={()=>scrollTo(top)} >Home</a>
-                <a className='p-2 hover:bg-gray-200 rounded-md cursor-pointer' onClick={()=>document.getElementById('about').scrollIntoView()}>About</a>
-                <a className='p-2 hover:bg-gray-200 rounded-md cursor-pointer' href="#skills">Skills</a>
-                <a className='p-2 hover:bg-gray-200 rounded-md cursor-pointer' href="#projects">Projects</a>
-                <a className='p-2 hover:bg-gray-200 rounded-md cursor-pointer' href="#contact">Contact</a>
+                <span className='text-[var(--accent)]'> Gowtham</span>
+            </button>
+
+            <div className='hidden items-center gap-2 md:flex'>
+                {navLinks.map((link) => (
+                    <button
+                        key={link.label}
+                        type='button'
+                        className='rounded-xl px-4 py-2 text-sm font-medium text-[var(--textsecondary)] transition-colors duration-200 hover:bg-white/[0.05] hover:text-[var(--headingprimary)]'
+                        onClick={() => handleNavigate(link.href)}
+                    >
+                        {link.label}
+                    </button>
+                ))}
             </div>
-            <img onClick={() => setMenu(!menu)} src={menu?cross:menuicon} className='w-5 md:hidden' alt="" />
-            {
-                menu && (
-                    <div onClick={()=>setMenu(false)} className='absolute top-12 right-0 w-full h-auto pb-5 pt-3 px-3 flex flex-col gap-1.5 bg-[var(--background)]'>
-                        <a href="" className='font-medium w-full py-1'>Home</a>
-                        <a href="#about" className='font-medium w-full py-1'>About</a>
-                        <a href="#skills" className='font-medium w-full py-1'>Skills</a>
-                        <a href="#projects" className='font-medium w-full py-1'>Projects</a>
-                        <a href="#contact" className='font-medium w-full py-1'>Contact</a>
-                    </div>
-                )
-            }
-        </div>
-    </>
+
+            <button type='button' onClick={() => setMenu(!menu)} className='rounded-xl border border-[var(--border)] bg-white/[0.03] p-3 md:hidden'>
+                <img src={menu ? cross : menuicon} className='w-4 invert' alt="Menu" />
+            </button>
+
+            {menu && (
+                <div className='panel absolute right-0 top-[5.5rem] flex w-full flex-col gap-2 p-3 md:hidden'>
+                    {navLinks.map((link) => (
+                        <button
+                            key={link.label}
+                            type='button'
+                            className='w-full rounded-xl px-4 py-3 text-left text-sm font-medium text-[var(--textsecondary)] transition-colors duration-200 hover:bg-white/[0.05] hover:text-[var(--headingprimary)]'
+                            onClick={() => handleNavigate(link.href)}
+                        >
+                            {link.label}
+                        </button>
+                    ))}
+                </div>
+            )}
+        </nav>
   )
 }
 

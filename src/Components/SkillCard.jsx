@@ -1,17 +1,29 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
-const SkillCard = ({skill, image, experience}) => {
-
-    const css = "shadow-lg bg-[var(--surface)] rounded-lg p-3 flex flex-col items-center justify-around h-44 hover:scale-105 transition-transform duration-500 ease-out"
-
+const SkillCard = ({ skill, image, experience }) => {
   return (
-    <div className={css}>
-      <img src={image} alt="" className='w-16 p-2 bg-gradient-to-br from-[#1838d8] to-[#6c4ce0] rounded-lg'/>
-      <h2 className='text-xl font-semibold text-[var(--background)]'>{skill}</h2>
-      <div className='w-4/5 bg-[#475b6f] rounded-lg'>
-        <div className="h-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-500" style={{ width: `${experience}%` }}></div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
+      className='skill-row'
+    >
+      <div className='flex h-12 w-12 items-center justify-center rounded-2xl border border-[var(--border)] bg-white/[0.02]'>
+        <img src={image} alt={skill} className='h-6 w-6 grayscale brightness-125' />
       </div>
-    </div>  
+      <div className='min-w-0'>
+        <h2 className='text-lg font-semibold tracking-[-0.03em] text-[var(--headingprimary)]'>{skill}</h2>
+        <div className='mt-3 h-1.5 w-full rounded-full bg-white/[0.06]'>
+          <div
+            className='h-1.5 rounded-full bg-[linear-gradient(90deg,#4f7cff_0%,#7aa2ff_100%)]'
+            style={{ width: `${experience}%` }}
+          />
+        </div>
+      </div>
+      <p className='text-sm font-semibold text-[var(--headingsecondary)]'>{experience}%</p>
+    </motion.div>
   )
 }
 

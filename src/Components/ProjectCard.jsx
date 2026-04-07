@@ -1,31 +1,57 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import github from '../assets/githubwhite.svg'
 
-const ProjectCard = ({preview, title, description, tech, githublink}) => {
+const ProjectCard = ({ preview, title, description, tech, githublink }) => {
+  const hasGithubLink = Boolean(githublink)
+
   return (
-    <div className='rounded-2xl bg-transparent border-2 border-[#2f3f57] shadow-md transition-all duration-300 ease-in hover:-translate-y-2'>
-      <div className='relative h-[250px] overflow-hidden rounded-t-2xl group'>
-        <img src={preview} alt="" className='object-cover w-full h-full'/>
-        <div className='absolute left-0 top-full opacity-0 bg-gradient-to-b from-[#02269d]/80 to-[#104782]/80 w-full h-full flex flex-col items-center justify-center gap-4 transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-100'>
-          <h2 className='text-2xl font-bold text-[#ffff]'>{title}</h2>
-          <p className='text-gray-300 w-4/5 text-center font-medium'>{description}</p>
-          <div>
-            <a href={githublink} target='blank' className='' aria-disabled={!githublink}>
-              <img src={github} alt="" className='w-12 rounded-full bg-[#000106db] p-1.5'/>
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      whileHover={{ scale: 1.02 }}
+      transition={{ duration: 0.32, ease: 'easeOut' }}
+      className='group flex h-full flex-col overflow-hidden rounded-[12px] border border-[var(--border)] bg-white/[0.02]'
+    >
+      <div className='overflow-hidden'>
+        <img src={preview} alt={title} className='h-[220px] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.01]' />
+      </div>
+
+      <div className='flex flex-1 flex-col p-6'>
+        <h2 className='text-2xl font-bold tracking-[-0.04em] text-[var(--headingprimary)]'>{title}</h2>
+        <p className='mt-3 text-sm leading-7 text-[var(--textsecondary)]'>{description}</p>
+
+        <div className='mt-5 flex flex-wrap gap-2'>
+          {tech?.map((item) => (
+            <span
+              key={item}
+              className='rounded-full border border-[var(--border)] bg-white/[0.03] px-3 py-1 text-xs font-medium text-[var(--textsecondary)]'
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+
+        <div className='mt-6'>
+          {hasGithubLink ? (
+            <a
+              href={githublink}
+              target='_blank'
+              rel='noreferrer'
+              className='ghost-button w-full justify-center gap-2'
+            >
+              <img src={github} alt="" className='w-4 opacity-90' />
+              View Source
             </a>
-          </div>
+          ) : (
+            <div className='ghost-button w-full cursor-not-allowed justify-center opacity-60'>
+              Source Unavailable
+            </div>
+          )}
         </div>
       </div>
-      <div className='flex justify-start items-center p-6 gap-2 flex-wrap space-y-1'>
-        {
-            tech && tech.map((element, idx) => (
-                <div key={idx} className='rounded-3xl bg-[#428bd423] leading-7 px-2.5 min-w-fit border border-[#62778c] text-xs text-[#2782dd] cursor-pointer'>
-                    <p>{element}</p>
-                </div>
-            ))
-        }
-      </div>
-    </div>
+    </motion.article>
   )
 }
 

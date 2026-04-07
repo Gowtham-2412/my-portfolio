@@ -1,101 +1,85 @@
-import React from "react";
-import ContactForm from "../Components/ContactForm";
-import mail from "../assets/mailwhite.svg";
-import phone from "../assets/phonewhite.svg";
-import place from "../assets/locationwhite.svg";
+import React from 'react'
+import ContactForm from '../Components/ContactForm'
+import mail from '../assets/mailwhite.svg'
+import phone from '../assets/phonewhite.svg'
+import place from '../assets/locationwhite.svg'
 import linkedin from '../assets/linkedin.svg'
 import twitter from '../assets/twitter.svg'
 import github from '../assets/github.svg'
 import facebook from '../assets/facebook.svg'
 
 const Contact = () => {
+  const contacts = [
+    { icon: mail, label: 'Email', value: 'sgowtham.konijeti@gmail.com' },
+    { icon: phone, label: 'Phone', value: '+91 9502323161' },
+    { icon: place, label: 'Location', value: 'Durgapur, West Bengal' },
+  ]
+
+  const socialLinks = [
+    { icon: github, href: 'https://github.com/Gowtham-2412', label: 'GitHub' },
+    { icon: facebook, href: 'https://www.facebook.com/', label: 'Facebook' },
+    { icon: twitter, href: 'https://x.com/', label: 'Twitter' },
+    { icon: linkedin, href: 'https://linkedin.com/in/sai-gowtham-konijeti', label: 'LinkedIn' },
+  ]
+
   return (
-    <section id="contact" className="py-10">
-      <h1 className=" text-4xl font-[800] text-center py-5">Get In Touch</h1>
-      <p className="text-center text-lg">
-        Ready to start your next project? Let's talk!
-      </p>
-      <div className="flex justify-between w-3/4 mx-auto mt-10 max-md:flex-col max-md:gap-8 gap-2">
-        <div className="md:basis-1/2">
-          <h2 className="font-[800] text-2xl text-[var(--headingsecondary)] mb-4">
-            Let's Work Together
+    <section id='contact' className='section-shell section-spacing scroll-mt-24'>
+      <div className='text-center'>
+        <span className='section-kicker'>Contact</span>
+        <h1 className='section-title mt-6'>Open to thoughtful opportunities.</h1>
+        <p className='section-subtitle'>Ready to start your next project? Let&apos;s talk.</p>
+      </div>
+
+      <div className='mt-16 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]'>
+        <div>
+          <h2 className='text-3xl font-bold tracking-[-0.04em] text-[var(--headingprimary)]'>
+            Let&apos;s Work Together
           </h2>
-          <p className="text-[var(--textsecondary)] font-medium mb-4">
-            I'm always interested in new opportunities and exciting projects.
-            Whether you need a complete website, web application, or just want
-            to say hello, feel free to reach out.
+          <p className='mt-4 text-base leading-8 text-[var(--textsecondary)]'>
+            I&apos;m always interested in new opportunities and exciting projects. Whether you need
+            a complete website, web application, or just want to say hello, feel free to reach out.
           </p>
-          <div className="flex flex-col gap-8 items-start mt-14 mb-8">
-            <div className="flex gap-4 items-center">
-              <img
-                src={mail}
-                alt=""
-                className="p-3 w-12 rounded-2xl bg-[#3658b6]"
-              />
-              <div>
-                <p className="font-bold text-lg">Email</p>
-                <p className="font-medium text-sm text-[var(--textsecondary)]">
-                  sgowtham.konijeti@gmail.com
-                </p>
+
+          <div className='section-divider mt-10' />
+          <div className='mt-8 flex flex-col gap-5'>
+            {contacts.map((item) => (
+              <div key={item.label} className='flex items-center gap-4'>
+                <div className='flex h-12 w-12 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--accentsoft)]'>
+                  <img src={item.icon} alt="" className='w-5' />
+                </div>
+                <div>
+                  <p className='text-lg font-semibold text-[var(--headingprimary)]'>{item.label}</p>
+                  <p className='mt-1 text-sm text-[var(--textsecondary)]'>{item.value}</p>
+                </div>
               </div>
-            </div>
-            <div className="flex gap-4 items-center">
-              <img
-                src={phone}
-                alt=""
-                className="p-3 w-12 rounded-2xl bg-[#3658b6]"
-              />
-              <div>
-                <p className="font-bold text-lg">Phone</p>
-                <p className="font-medium text-sm text-[var(--textsecondary)]">
-                  +91 9502323161
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-center">
-              <img
-                src={place}
-                alt=""
-                className="p-3 w-12 rounded-2xl bg-[#3658b6]"
-              />
-              <div>
-                <p className="font-bold text-lg">Location</p>
-                <p className="font-medium text-sm text-[var(--textsecondary)]">
-                  Durgapur, West Bengal
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
-          <p className="text-xl font-bold">Follow Me</p>
-          <div className="mt-4 flex gap-5 items-center">
-            <div className="w-10 h-10 border border-black p-2 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:scale-105">
-              <a href="https://github.com/Gowtham-2412" target="blank">
-                <img src={github} className="w-6" />
-              </a>
-            </div>
-            <div className="w-10 h-10 border border-black p-2 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:scale-105">
-              <a href="https://www.facebook.com/" target="blank">
-                <img src={facebook} className="w-6" />
-              </a>
-            </div>
-            <div className="w-10 h-10 border border-black p-2 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:scale-105">
-              <a href="https://x.com/" target="blank">
-                <img src={twitter} className="w-6" />
-              </a>
-            </div>
-            <div className="w-10 h-10 border border-black p-2 rounded-full flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:scale-105">
-              <a href="https://linkedin.com/in/sai-gowtham-konijeti" target="blank">
-                <img src={linkedin} className="w-6" />
-              </a>
+
+          <div className='mt-10'>
+            <p className='text-sm font-semibold uppercase tracking-[0.24em] text-[var(--texttertiary)]'>Follow Me</p>
+            <div className='mt-4 flex flex-wrap gap-3'>
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='icon-shell'
+                  aria-label={link.label}
+                >
+                  <img src={link.icon} className='w-5 opacity-90' alt="" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
-        <div className="md:basis:1/2">
-          <ContactForm/>
+
+        <div>
+          <ContactForm />
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

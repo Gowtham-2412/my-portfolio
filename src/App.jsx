@@ -8,7 +8,7 @@ import Contact from './Sections/Contact'
 
 const App = () => {
   return (
-    <div className='bg-[var(--background)] min-h-screen'>
+    <div className='min-h-screen bg-[var(--background)] text-[var(--textprimary)]'>
       <Header/>
       <Hero/>
       <About/>
