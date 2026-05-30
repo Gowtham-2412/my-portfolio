@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import profile from '../assets/profilephoto2.png'
+import profile from '../assets/Profile.png'
 
 const About = () => {
   const handleDownload = () => {
